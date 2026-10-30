@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Entrepreneurship Summit 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f8;--surface:#fff;--text:#0f1536;--muted:#4b5275;--line:#c9d0e6;
+  --blue:#2a3bff;--blue-ink:#fff;--yellow:#ffc400;--yellow-ink:#0f1536;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0a0f2e;--surface:#141b45;--text:#eef1ff;--muted:#a7afd6;--line:#2b3566;--blue:#6f7cff;--blue-ink:#0a0f2e;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0a0f2e;--surface:#141b45;--text:#eef1ff;--muted:#a7afd6;--line:#2b3566;--blue:#6f7cff;--blue-ink:#0a0f2e;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:1rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:1rem}
+nav b{font-weight:800;letter-spacing:-.02em}
+nav div{display:flex;gap:1.25rem;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--text)}
+@media(max-width:520px){nav div a:first-child{display:none}}
+/* hero */
+.hero{background:var(--blue);color:var(--blue-ink);position:relative;overflow:hidden}
+.hero .wrap{padding:clamp(3rem,9vw,7rem) 0 clamp(2.5rem,6vw,4.5rem)}
+.hero h1{font-size:clamp(2.4rem,7vw,5.6rem);line-height:.98;letter-spacing:-.04em;font-weight:800;margin:0 0 1rem;max-width:14ch}
+.hero p{max-width:48ch;font-size:1.15rem;margin:0 0 2rem;opacity:.92}
+.meta{font-weight:600;margin-bottom:1.25rem}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,2vw,1.25rem);margin:0 0 2rem;padding:0;list-style:none}
+.timer li{border-top:4px solid var(--yellow);padding-top:.5rem}
+.timer .n{display:block;font-size:clamp(2.6rem,10.5vw,8rem);font-weight:800;line-height:.95;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.timer .l{font-size:.95rem;font-weight:600;opacity:.85}
+.live{font-size:clamp(2rem,7vw,4rem);font-weight:800;margin:0 0 2rem}
+.btn{display:inline-block;background:var(--yellow);color:var(--yellow-ink);font-weight:800;padding:.9rem 1.6rem;border-radius:999px;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+/* sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+h2{font-size:clamp(1.9rem,4.5vw,3.2rem);letter-spacing:-.035em;line-height:1.05;margin:0 0 .5rem;font-weight:800}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:60ch}
+/* tabs */
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{font:inherit;font-weight:600;cursor:pointer;border:2px solid var(--text);background:transparent;color:var(--text);border-radius:12px;padding:.6rem 1.1rem;text-align:left;line-height:1.2}
+.tab small{display:block;font-weight:400;color:inherit;opacity:.75}
+.tab[aria-selected="true"]{background:var(--text);color:var(--bg)}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.chip{font:inherit;font-size:.9rem;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:.3rem .9rem}
+.chip[aria-pressed="true"]{background:var(--blue);color:var(--blue-ink);border-color:var(--blue)}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:7.5rem 1fr auto;gap:.5rem 1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:baseline;animation:in .35s ease both}
+.list time{font-weight:800;font-variant-numeric:tabular-nums}
+.list h3{margin:0;font-size:1.2rem;letter-spacing:-.02em}
+.list p{margin:.15rem 0 0;color:var(--muted);font-size:.95rem}
+.tag{font-size:.8rem;font-weight:600;border-radius:6px;padding:.15rem .6rem;white-space:nowrap}
+.t-Keynote{background:var(--yellow);color:var(--yellow-ink)}
+.t-Panel{background:var(--blue);color:var(--blue-ink)}
+.t-Workshop{border:1px solid var(--text)}
+.empty{padding:2rem 0;color:var(--muted)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:640px){.list li{grid-template-columns:1fr auto}.list time{grid-column:1/-1}}
+/* speakers */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1.25rem}
+.card{perspective:1000px;height:330px;cursor:pointer;border-radius:18px}
+.inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;padding:1.4rem;display:flex;flex-direction:column;overflow:hidden}
+.front{background:var(--surface);border:1px solid var(--line);justify-content:flex-end}
+.back{background:var(--text);color:var(--bg);transform:rotateY(180deg);justify-content:center;gap:.6rem;font-size:.95rem}
+.av{position:absolute;top:1.4rem;left:1.4rem;width:5.5rem;height:5.5rem;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.8rem;color:#0f1536}
+.front h3{margin:0;font-size:1.3rem;letter-spacing:-.02em}
+.front p{margin:.1rem 0 0;color:var(--muted);font-size:.92rem}
+.back h3{margin:0;font-size:1.15rem}
+.back .ses{font-weight:600;color:var(--yellow)}
+:root:not([data-theme="dark"]) .back .ses{color:#ffc400}
+.back p{margin:0}
+@media(hover:hover){.card:hover .inner{transform:rotateY(180deg)}}
+.card.flipped .inner,.card:focus-visible .inner{transform:rotateY(180deg)}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>GES 2027</b><div><a href="#schedule">Schedule</a><a href="#speakers">Speakers</a></div></div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="meta">30 January,2027 - 1 February,2027 · Kharagpur, India</p>
+    <h1>Where founders meet their next breakthrough</h1>
+    <p>Three days of keynotes, panels and hands-on workshops with the people building companies across the world.</p>
+    <ul class="timer" id="timer" aria-label="Time until the summit starts">
+      <li><span class="n" data-u="d">--</span><span class="l">days</span></li>
+      <li><span class="n" data-u="h">--</span><span class="l">hours</span></li>
+      <li><span class="n" data-u="m">--</span><span class="l">minutes</span></li>
+      <li><span class="n" data-u="s">--</span><span class="l">seconds</span></li>
+    </ul>
+    <p class="live" id="live" hidden>The summit is live.</p>
+    <a class="btn" href="#schedule">Plan your three days</a>
+  </div>
+</header>
+
+<section id="schedule">
+  <div class="wrap">
+    <h2>Three days, one schedule</h2>
+    <p class="sub">Pick a day, then filter by session type. Times are in India Standard Time.</p>
+    <div class="tabs" role="tablist" aria-label="Summit days" id="tabs"></div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by session type"></div>
+    <div id="panel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="speakers" style="background:var(--surface)">
+  <div class="wrap">
+    <h2>Meet the speakers</h2>
+    <p class="sub">Hover over a card, or tap it on a touch screen, to read the bio and see their session.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Global Entrepreneurship Summit 2027. Speakers and sessions shown here are sample content.</div></footer>
+
+<script>
+// ---- Data ----
+const START = new Date("2027-01-30T09:00:00+05:30"); // fixed offset avoids browser timezone drift
+const SPEAKERS = [
+  {id:"a",name:"Ananya Rao",role:"Founder, Kisan Loop",bio:"Built a farm-to-retail supply network serving 40,000 growers across six states.",c:"#ffc400"},
+  {id:"b",name:"Marcus Bell",role:"Partner, Northlight Ventures",bio:"Backed 60 seed-stage companies and writes about what founders get wrong in their first pitch.",c:"#9fb0ff"},
+  {id:"c",name:"Dr. Leila Haddad",role:"CEO, Cellwise",bio:"Took a diagnostics start-up from university lab to clinics in 12 countries.",c:"#7de0c1"},
+  {id:"d",name:"Tomás Ferreira",role:"Co-founder, Rota",bio:"Runs a logistics platform that cut delivery times for small businesses by a third.",c:"#ff9a8a"},
+  {id:"e",name:"Priya Menon",role:"Chief Economist, OpenLedger",bio:"Studies how credit reaches first-time entrepreneurs in emerging markets.",c:"#ffc400"},
+  {id:"f",name:"Kwame Boateng",role:"Founder, SolarSpring",bio:"Brought pay-as-you-go solar to 200,000 homes across West Africa.",c:"#9fb0ff"},
+  {id:"g",name:"Hana Ito",role:"Head of Product, Lumen AI",bio:"Leads teams shipping AI tools for small-business owners.",c:"#7de0c1"},
+  {id:"h",name:"Sam Okafor",role:"Founder, Tidy Capital",bio:"Teaches first-time founders how to read a term sheet.",c:"#ff9a8a"}
+];
+const sp = id => SPEAKERS.find(s => s.id === id);
+const DAYS = [
+  {label:"Day 1",theme:"Start",date:"Sat 30 Jan",sessions:[
+    {t:"09:30",title:"Opening keynote: building in uncertain markets",type:"Keynote",by:"a",room:"Netaji Auditorium"},
+    {t:"11:00",title:"Panel: from idea to first 100 customers",type:"Panel",by:"d",room:"Kalidas Auditorium"},
+    {t:"13:30",title:"Workshop: write a one-page business plan",type:"Workshop",by:"h",room:"Vikramshila-V1"},
+    {t:"15:00",title:"Keynote: why most seed rounds fail",type:"Keynote",by:"b",room:"Vikramshila-V2"},
+    {t:"16:30",title:"Panel: first hires and early culture",type:"Panel",by:"g",room:"J.C. Bose Auditorium"}]},
+  {label:"Day 2",theme:"Scale",date:"Sun 31 Jan",sessions:[
+    {t:"09:30",title:"Keynote: health-tech beyond the lab",type:"Keynote",by:"c",room:"Kalidas Auditorium"},
+    {t:"11:00",title:"Workshop: reading a term sheet",type:"Workshop",by:"h",room:"Vikramshila-V1"},
+    {t:"13:00",title:"Panel: access to credit for new founders",type:"Panel",by:"e",room:"Vikramshila-V2"},
+    {t:"14:30",title:"Workshop: pricing a product people will pay for",type:"Workshop",by:"d",room:"Netaji Auditorium"},
+    {t:"16:00",title:"Panel: growing across borders",type:"Panel",by:"f",room:"J.C. Bose Auditorium"}]},
+  {label:"Day 3",theme:"Sustain",date:"Mon 1 Feb",sessions:[
+    {t:"09:30",title:"Keynote: energy access as a business",type:"Keynote",by:"f",room:"Vikramshila-V2"},
+    {t:"11:00",title:"Panel: AI tools for small businesses",type:"Panel",by:"g",room:"Kalidas Auditorium"},
+    {t:"13:00",title:"Workshop: your first investor update",type:"Workshop",by:"b",room:"Vikramshila-V1"},
+    {t:"14:30",title:"Panel: staying power after the first launch",type:"Panel",by:"a",room:"Netaji Auditorium"},
+    {t:"16:00",title:"Closing keynote: the next decade of founders",type:"Keynote",by:"e",room:"J.C. Bose Auditorium"}]}
+];
+const TYPES = ["All","Keynote","Panel","Workshop"];
+
+// ---- Countdown ----
+const els = {};
+document.querySelectorAll("[data-u]").forEach(e => els[e.dataset.u] = e);
+function tick(){
+  let diff = Math.max(0, START - Date.now());
+  if (diff === 0){
+    document.getElementById("timer").hidden = true;
+    document.getElementById("live").hidden = false;
+    clearInterval(timerId);
+    return;
+  }
+  const s = Math.floor(diff / 1000);
+  const v = {d:Math.floor(s/86400), h:Math.floor(s%86400/3600), m:Math.floor(s%3600/60), s:s%60};
+  for (const k in v) els[k].textContent = k === "d" ? v[k] : String(v[k]).padStart(2,"0");
+}
+tick();
+const timerId = setInterval(tick, 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+
+// ---- Schedule state ----
+const state = {day:0, type:"All"};
+const tabsEl = document.getElementById("tabs"), chipsEl = document.getElementById("chips"), panel = document.getElementById("panel");
+function renderTabs(){
+  tabsEl.innerHTML = DAYS.map((d,i) =>
+    `<button class="tab" role="tab" id="tab-${i}" aria-selected="${i===state.day}" aria-controls="panel" tabindex="${i===state.day?0:-1}" data-i="${i}">${d.label}: ${d.theme}<small>${d.date}</small></button>`).join("");
+}
+function renderChips(){
+  chipsEl.innerHTML = TYPES.map(t => `<button class="chip" aria-pressed="${t===state.type}" data-t="${t}">${t==="All"?"All sessions":t+"s"}</button>`).join("");
+}
+function renderList(){
+  const items = DAYS[state.day].sessions.filter(s => state.type === "All" || s.type === state.type);
+  panel.setAttribute("aria-labelledby","tab-"+state.day);
+  panel.innerHTML = items.length
+    ? `<ul class="list">${items.map(s => `<li><time>${s.t}</time><div><h3>${s.title}</h3><p>${sp(s.by).name} · ${s.room}</p></div><span class="tag t-${s.type}">${s.type}</span></li>`).join("")}</ul>`
+    : `<p class="empty">No ${state.type.toLowerCase()} sessions on this day. Try another day or filter.</p>`;
+}
+function setState(patch){ Object.assign(state, patch); renderTabs(); renderChips(); renderList(); }
+tabsEl.addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) setState({day:+b.dataset.i}); });
+tabsEl.addEventListener("keydown", e => {
+  const k = {ArrowRight:1, ArrowLeft:-1}[e.key]; if (!k) return;
+  setState({day:(state.day + k + DAYS.length) % DAYS.length});
+  document.getElementById("tab-"+state.day).focus();
+});
+chipsEl.addEventListener("click", e => {
+  const b = e.target.closest(".chip");
+  if (b){ setState({type:b.dataset.t}); chipsEl.querySelector(`[data-t="${b.dataset.t}"]`).focus(); }
+});
+setState({});
+
+// ---- Speakers ----
+const sessionOf = id => { for (const d of DAYS) { const s = d.sessions.find(x => x.by === id); if (s) return `${d.label}, ${s.t}: ${s.title}`; } return ""; };
+const grid = document.getElementById("grid");
+grid.innerHTML = SPEAKERS.map(s => {
+  const ini = s.name.replace(/Dr\. /,"").split(" ").map(w => w[0]).join("");
+  return `<div class="card" tabindex="0" role="button" aria-pressed="false" aria-label="${s.name}, ${s.role}. Press to flip.">
+    <div class="inner">
+      <div class="face front"><div class="av" style="background:${s.c}">${ini}</div><h3>${s.name}</h3><p>${s.role}</p></div>
+      <div class="face back"><h3>${s.name}</h3><p>${s.bio}</p><p class="ses">${sessionOf(s.id)}</p></div>
+    </div></div>`;
+}).join("");
+function flip(c){ const on = c.classList.toggle("flipped"); c.setAttribute("aria-pressed", on); }
+grid.addEventListener("click", e => { const c = e.target.closest(".card"); if (c) flip(c); });
+grid.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ const c = e.target.closest(".card"); if (c){ e.preventDefault(); flip(c); } } });
+</script>
+</body>
+</html>
